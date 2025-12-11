@@ -1,0 +1,32 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Shubham Gangwar | AI Engineer",
+  description: "Portfolio of Shubham Gangwar - AI Engineer, Agentic Workflows, and Next-Gen Web Apps.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;400;500;600&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${inter.variable} antialiased`}>
+        {children}
+      </body>
+    </html>
+  );
+}

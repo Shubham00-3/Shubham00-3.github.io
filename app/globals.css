@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  /* Sean Halpin "Dark Forest" Theme */
+  --background: #1b2d2a;
+  --foreground: #f2f0e9;
+
+  /* Soft Cards */
+  --card: #243c38;
+  --card-foreground: #f2f0e9;
+
+  --popover: #243c38;
+  --popover-foreground: #f2f0e9;
+
+  /* Accents */
+  --primary: #f2f0e9;
+  --primary-foreground: #1b2d2a;
+
+  --secondary: #2f4d48;
+  --secondary-foreground: #f2f0e9;
+
+  --muted: #2f4d48;
+  --muted-foreground: #a0b3b0;
+
+  --accent: #d8cba9;
+  --accent-foreground: #1b2d2a;
+
+  --destructive: #ff6b6b;
+  --destructive-foreground: #ffffff;
+
+  --border: #2f4d48;
+  --input: #2f4d48;
+  --ring: #d8cba9;
+
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+}
+
+/* Selection */
+::selection {
+  background: rgba(216, 203, 169, 0.3);
+  color: #f2f0e9;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Link underline animation */
+a {
+  text-decoration: none;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
